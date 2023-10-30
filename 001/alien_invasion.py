@@ -24,8 +24,9 @@ def run_game():
         # watch for mouse and keyboard events
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
-        gf.update_bullets(bullets)
-        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
-        gf.create_fleet(ai_settings, screen, ship, aliens)
+        gf.update_bullets(ai_settings, screen, ship, alien, bullets)
+        gf.update_aliens(ai_settings, alien)
+        gf.update_screen(ai_settings, screen, ship, alien, bullets)
+        gf.create_fleet(ai_settings, screen, ship, alien)
 
 run_game()
